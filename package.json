@@ -1,0 +1,27 @@
+{
+  "name": "chrome-cachefile-decode",
+  "version": "0.1.0",
+  "description": "Decode files from Google Chrome's cache",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "cli": "node cli"
+  },
+  "bin": {
+    "chromecachedecode": "./cli.js"
+  },
+  "repository":"https://github.com/centre-for-effective-altruism/chrome-cachefile-decode",
+  "author": "Sam Deere <dev@colophonemes.com>",
+  "license": "ISC",
+  "dependencies": {
+    "better-console": "^0.2.4",
+    "commander": "^2.9.0",
+    "pako": "^1.0.3",
+    "zlibjs": "^0.2.0"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "chai-as-promised": "^6.0.0",
+    "mocha": "^3.1.2"
+  }
+}
