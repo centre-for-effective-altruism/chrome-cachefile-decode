@@ -63,23 +63,23 @@ Usage: cli STDIN | cachefile [options]
 
     -h, --help               output usage information
     -i, --input <input>      A string copied from a Chrome cache file
-    -f, --file <file.txt>    Path to a file containing the Chrome cache file
+    -f, --file <file>    Path to a file containing the Chrome cache file
     -o, --output [filename]  Save file to disk. Filename defaults to resource filename (e.g. `www.example.com`, `index.html`); alternatively specify a filename as the argument. If this argument is not supplied, response will be piped to STDOUT
 ```
 
-Load data from STDIN (e.g. for OSX — use whatever paste utility your OS supports):
+Load data from STDIN (e.g. for OSX — use whatever paste utility your OS supports) and save to default filename:
 ```
 pbpaste | chromecachedecode -o
 ```
 
-Load data from a file:
+Load data from a file and save to `outfile.html`:
 ```
-chromecachedecode -o
+chromecachedecode -f input.txt -o outfile.html
 ```
 
 ## Accessing cache files
 
-You'll need to visit `chrome://cache` to see your cache files. Find the one you want, select the whole document and copy it (`Ctrl/Cmd + A` `>` `Ctrl/Cmd+C` should do nicely).
+You'll need to visit `chrome://cache` in a new tab to see your cache files. Find the one you want, select the whole document and copy it (`Ctrl/Cmd + A` `>` `Ctrl/Cmd+C` should do nicely).
 
 The result should look a little something like this:
 
